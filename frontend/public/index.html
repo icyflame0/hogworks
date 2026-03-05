@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hogworks Guest Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      * { box-sizing: border-box; }
+      body { font-family: 'Lato', sans-serif; background-color: #1a0a2e; margin: 0; }
+      @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+      @keyframes sparkle { 0%,100%{opacity:1} 50%{opacity:0.3} }
+      @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+      @keyframes slideUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+      @keyframes shimmer { from{background-position:-200% center} to{background-position:200% center} }
+      .animate-float { animation: float 3s ease-in-out infinite; }
+      .animate-sparkle { animation: sparkle 2s ease-in-out infinite; }
+      .animate-fade-in { animation: fadeIn 0.5s ease-in; }
+      .animate-slide-up { animation: slideUp 0.4s ease-out; }
+      .gold-gradient { background: linear-gradient(135deg,#c9a84c,#f5e17d,#c9a84c); background-size:200% auto; -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; animation: shimmer 4s linear infinite; }
+      .spell-card { background: linear-gradient(145deg,rgba(61,26,94,0.8),rgba(26,10,46,0.95)); border: 1px solid rgba(201,168,76,0.25); backdrop-filter: blur(12px); }
+      .section-card { background: rgba(15,5,30,0.97); border: 1px solid rgba(201,168,76,0.12); }
+      .gold-btn { background: linear-gradient(135deg,#8b5e00,#c9a84c,#f0c060); background-size:200% auto; color:#1a0900; font-weight:700; transition: background-position .3s; }
+      .gold-btn:hover { background-position: right center; }
+      .chat-user { background: linear-gradient(135deg,#7a4f00,#c9a84c); border-radius: 18px 18px 4px 18px; }
+      .chat-ai { background: rgba(37, 36, 37, 0.8); border: 1px solid rgba(201,168,76,0.15); border-radius: 18px 18px 18px 4px; }
+      input, textarea { background: rgba(255, 253, 253, 0.35) !important; border: 1px solid rgba(201,168,76,0.2); border-radius: 10px; color: white; padding: 10px 14px; width: 100%; font-family: 'Lato', sans-serif; font-size: 14px; transition: border-color .2s; outline: none; }
+      input:focus, textarea:focus { border-color: rgba(201,168,76,0.6); }
+      input::placeholder, textarea::placeholder { color: rgba(255, 255, 255, 0.25); }
+      input[type="datetime-local"]::-webkit-calendar-picker-indicator { filter: invert(0.6); cursor: pointer; }
+      ::-webkit-scrollbar { width: 4px; }
+      ::-webkit-scrollbar-thumb { background: rgba(201,168,76,0.3); border-radius: 2px; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
